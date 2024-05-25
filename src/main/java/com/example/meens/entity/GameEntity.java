@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * Сущность таблицы game.
+ */
 @Entity
 @Getter
 @Setter
@@ -13,7 +16,6 @@ public class GameEntity {
 
     @Id
     @Column(name = "id", nullable = false)
-
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String gameId;

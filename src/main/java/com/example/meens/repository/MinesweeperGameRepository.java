@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Репозиторий для работы с BD
+ * Репозиторий для работы с таблицей game
  */
 @Repository
 public interface MinesweeperGameRepository extends JpaRepository<GameEntity, String> {

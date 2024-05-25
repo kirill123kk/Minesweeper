@@ -7,19 +7,19 @@ import liquibase.pro.packaged.S;
  */
 public class ToStringMapperImpl implements ToStringMapper {
     @Override
-    public String[][] toArrayString(int firstSize, int secondSize, String str) {
-        String [][] arrayChar = new String[firstSize][secondSize];
-        for (int i = 0; i < firstSize; i++) {
-            for (int j = 0; j < secondSize; j++) {
-                arrayChar[i][j] = String.valueOf(str.charAt(i * firstSize + j));
+    public String[][] toArrayString(int rowNumber, int colNumber, String str) {
+        String[][] arrayChar = new String[rowNumber][colNumber];
+        for (int i = 0; i < rowNumber; i++) {
+            for (int j = 0; j < colNumber; j++) {
+                arrayChar[i][j] = String.valueOf(str.charAt(i * colNumber + j));
             }
         }
         return arrayChar;
     }
 
     @Override
-    public String toSting(char[][] str) {
-        StringBuilder stringBuilder =new StringBuilder();
+    public String toString(char[][] str) {
+        StringBuilder stringBuilder = new StringBuilder();
         for (char[] row : str) {
             for (char c : row) {
                 stringBuilder.append(c);
@@ -27,9 +27,10 @@ public class ToStringMapperImpl implements ToStringMapper {
         }
         return stringBuilder.toString();
     }
+
     @Override
-    public String toSting(String[][] str) {
-        StringBuilder stringBuilder =new StringBuilder();
+    public String toString(String[][] str) {
+        StringBuilder stringBuilder = new StringBuilder();
         for (String[] row : str) {
             for (String c : row) {
                 stringBuilder.append(c);

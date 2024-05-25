@@ -11,7 +11,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
  */
 public interface GameLogicService {
     /**
-     * Метод начало новой игры.
+     * Метод начала новой игры.
      *
      * @param newGame запрос на создание игры.
      * @return ответ с информацией о сушности {@link GameEntity}.
@@ -22,9 +22,9 @@ public interface GameLogicService {
      * Метод игрового хода.
      *
      * @param gameTurnRequest запрос на совершение хода.
-     * @param gameEntity сущность из BD.
+     * @param gameEntity      сущность из BD.
      * @return ответ с информацией о сущности {@link GameEntity}
      * @throws JsonProcessingException
      */
-    GameEntity turnGame(GameTurnRequest gameTurnRequest, GameEntity gameEntity) throws JsonProcessingException, MinesweeperException;
+    GameEntity turnGame(GameTurnRequest gameTurnRequest, GameEntity gameEntity);
 }

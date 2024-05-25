@@ -15,14 +15,13 @@ public interface ToStringMapper {
     /**
      * Метод для преревода из String в String[][]
      *
-     * @param firstSize  размерность строк.
-     * @param secondSize размерность столбцов.
-     * @param str        строка для преобразования.
+     * @param rowNumber размерность строк.
+     * @param colNumber размерность столбцов.
+     * @param str       строка для преобразования.
      * @return char[][]
      */
-    @Mapping(source = "inch", target = "centimeter", qualifiedByName = "stringToChar")
-    @Named("stringToChar")
-    String[][] toArrayString(int firstSize, int secondSize, String str);
+    @Named("toArrayString")
+    String[][] toArrayString(int rowNumber, int colNumber, String str);
 
     /**
      * Метод для перевода из char[][] в String.
@@ -30,9 +29,8 @@ public interface ToStringMapper {
      * @param str двумерный массив char для перевода.
      * @return String.
      */
-    @Mapping(source = "inch", target = "centimeter", qualifiedByName = "stringToChar")
-    @Named("stringToChar")
-    String toSting(char[][] str);
+    @Named("toString")
+    String toString(char[][] str);
 
     /**
      * Метод для перевода из String[][] в String.
@@ -40,7 +38,6 @@ public interface ToStringMapper {
      * @param str двумерный массив String для перевода.
      * @return String.
      */
-    @Mapping(source = "inch", target = "centimeter", qualifiedByName = "stringToChar")
-    @Named("stringToChar")
-    String toSting(String[][] str);
+    @Named("toString")
+    String toString(String[][] str);
 }

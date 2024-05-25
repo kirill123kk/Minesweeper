@@ -27,6 +27,6 @@ public interface MinesweeperGameService {
      * @param gameTurnRequest запрос на совершение хода.
      * @return ответ с информацией об игре {@link GameInfoResponse}
      */
-    GameInfoResponse makeTurn(GameTurnRequest gameTurnRequest) throws JsonProcessingException;
+    GameInfoResponse makeTurn(GameTurnRequest gameTurnRequest);
 
 }

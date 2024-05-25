@@ -22,6 +22,5 @@ public enum FieldValue {
     EIGHT('8'),
     ZERO('0');
 
-
     private final char value;
 }
